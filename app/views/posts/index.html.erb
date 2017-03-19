@@ -6,7 +6,7 @@
     <div class="col-sm-8 col-md-6">
 		<% @posts.each do |post| %>
 		<h2> <%= link_to post.title, post_path(post) %> </h2>
-		<p> <%= post.created_at %> </p>
+		<p> <%= post.created_at %>  <%= User.find(post.user_id).email %></p>
 		<p> <%= link_to 'Delete', post_path(post), method: :delete, data: {Confirm:"Are you sure?"} %></p>
 		<% end %>
     </div>

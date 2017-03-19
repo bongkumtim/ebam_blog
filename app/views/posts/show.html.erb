@@ -4,11 +4,10 @@
     </div>
     <div class="col-sm-8 col-md-6">
 <h1> <%= @post.title %> </h1>
-<h6><%=@post.created_at %></h6>
+<h6><%=@post.created_at %>  <%= User.find(@post.user_id).email %></h6>
 <p> <%= @post.content %></p>
 
-<p> <%= link_to 'Delete', post_path(@post), method: :delete, data: {Confirm:"Are you sure?"} %></p>
-<p> <%= link_to 'Edit', edit_post_path(@post) %>
+<p> <%= link_to 'Delete', post_path(@post), method: :delete, data: {Confirm:"Are you sure?"} %>  <%= link_to 'Edit', edit_post_path(@post) %> </p>
 <br><br><br>
 
 <h2> <%= @post.comments.count %> Comments </h2>
