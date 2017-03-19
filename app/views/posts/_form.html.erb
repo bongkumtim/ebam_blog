@@ -1,0 +1,6 @@
+<h1> Create new Post here </h1>
+<%= simple_form_for @post do |f| %>
+  <%= f.input :title, label: 'Put your title here' %>
+  <%= f.input :content %>
+  <%= f.button :submit %>
+<% end %>

@@ -1,1 +1,10 @@
 <h1> hi </h1>
+
+<% @posts.each do |post| %>
+<h2> <%= link_to post.title, post_path(post) %> </h2>
+<p> <%= post.created_at %> </p>
+<p> <%= link_to 'Delete', post_path(post), method: :delete, data: {Confirm:"Are you sure?"} %></p>
+<% end %> 
+
+
+<%= link_to "Post", new_post_path %>
