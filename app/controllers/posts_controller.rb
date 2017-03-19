@@ -30,6 +30,19 @@ class PostsController < ApplicationController
 		redirect_to root_path
 	end
 
+	def melab
+		redirect_to "http://www.melab.cf"
+	end
+
+	def fb
+		redirect_to "https://www.facebook.com/eBusinessAssociationMalaysia"
+	end
+
+	def web
+		redirect_to "http://www.ebusiness.org.my"
+	end
+
+
 	private
 
 	def post_params
